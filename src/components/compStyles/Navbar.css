@@ -2,20 +2,30 @@
     font-family: 'Poppins', sans-serif;
 }
 
-ul{
+.nav ul{
     list-style-type: none;
     display:flex;
     flex-direction: row;
     justify-content: center;
   }
 
-li{
+.nav li{
+    display: flex;
     list-style: none;
-    padding: 5px;
+    padding: 30px;
 
 }
 
-a{
+.nav li a{
     text-decoration: none;
     color: #0D0D0D;
 }
+
+.nav, ul, li, a{
+    background-color: white;
+}
+
+.nav{
+    display: flex;
+}
+

@@ -1,0 +1,47 @@
+.homeCards{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+#ownerPhoto{
+    width: 300px;
+    height: 300px;
+    box-shadow: 10px 10px #F7D0B3;
+    transition: transform 250ms;
+}
+
+#ownerPhoto:hover {
+  transform: translateY(-10px);
+}
+
+aside{
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    background-color: transparent;
+    
+}
+
+aside h2{
+    text-align: center;
+    background-color: transparent;
+}
+
+.productButton{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+section button{
+    color: #FEF9F8;
+    background-color:#EF9273;
+    padding: 15px;
+    padding-left: 70px;
+    padding-right: 70px;
+    font-size: large;
+    border-radius: 10px;
+    border-style: none;
+}
