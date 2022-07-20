@@ -15,15 +15,19 @@ const Navbar = () => {
     <nav className='navLogo'>
         <ul>
             <li id='logo'>
-                <NavLink to="/">logo</NavLink>
+            <NavLink to="/"><img id='logo' src={'./images/smarT.png'} alt='Tyson Unce'></img></NavLink>
             </li>
         </ul>
     </nav>
-    <nav className='navRest'>
+    <nav className='navProducts'>
         <ul>
             <li>
                 <NavLink to="/products">Products</NavLink>
             </li>
+        </ul>
+    </nav>
+    <nav className='navContact'>
+        <ul>
             <li>
                 <NavLink to="/contact">Contact</NavLink>
             </li>

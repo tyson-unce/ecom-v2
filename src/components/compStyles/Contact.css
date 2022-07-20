@@ -1,0 +1,72 @@
+.contactForm{
+    font-size:x-large;
+}
+.form2 textarea{
+    font-size: larger;
+    border-radius: 10px;
+    border-style:solid;
+    box-shadow: 10px 10px #F7D0B3;
+    background-color: white;
+}
+
+.form2 input{
+    font-size: larger;
+    border-radius: 10px;
+    border-style:solid;
+    box-shadow: 10px 10px #F7D0B3;
+    background-color: blue;
+
+}
+
+.form1 input{
+    font-size: larger;
+    border-radius: 10px;
+    border-style:solid;
+    box-shadow: 10px 10px #F7D0B3;
+    width: 850px;
+
+}
+
+
+section label{
+    text-align: left;
+}
+
+#conH1{
+    text-align: center;
+    padding-bottom: 2%;
+}
+
+.conFormPro{
+    display: grid;
+    grid-template-columns: 20% 70% 10%;
+}
+
+.conFormPro p{
+    color: red;
+}
+
+.buttonSub{
+    display: grid;
+    grid-template-columns: 32% 20% 48%;
+}
+
+.buttonSub input{
+    color: #FEF9F8;
+    background-color:#EF9273;
+    padding: 15px;
+    padding-left: 70px;
+    padding-right: 70px;
+    font-size: large;
+    border-radius: 10px;
+    border-style: none;
+}
+
+.buttonSub input:hover{
+    cursor: pointer;
+}
+
+.uiMessage{
+    text-align: center;
+    padding-right: 17%;
+}
