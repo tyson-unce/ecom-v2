@@ -6,9 +6,30 @@ const Products = () => {
     <div className='prodBod'>
         <h1>Our Products</h1>
         <h5>(Don't want to look for it? We hear you.)</h5>
-
         
-        <button><label>Search:</label></button><input type ="text" name="comments" placeholder="ex. Smart TV"/>
+        <div className='searchBar'>
+        <form>
+        <input className ='searchButton'type="Submit" name="search" value="search"/>
+        
+        
+        <input className = 'actualSearchBar'type ="text" name="comments" placeholder="ex. Smart TV"/>
+        </form>
+        </div>
+
+        <div className='products'>
+          <div><img src={'./images/smarToven.png'} /></div>
+          <div>d</div>
+          <div>d</div>
+          <div>d</div>
+          <div>r</div>
+          <div>z</div>
+          <div>z</div>
+          <div>z</div>
+          <div>z</div>
+          <div>z</div>
+          <div>z</div>
+          <div>z</div>
+        </div>
     </div>
   )
 }

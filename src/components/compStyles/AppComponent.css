@@ -110,3 +110,8 @@ aside h2{
       grid-template-columns: 20% 60% 20%;
       padding-bottom: 5%;
   }
+
+  .slogan{
+    text-align: center;
+    font-size: x-large;
+  }

@@ -140,16 +140,3 @@
       display: grid;
       grid-template-columns: 25% 60% 15%;
   }
-  @media screen and (max-width: 900px) {
-	footer{
-	  position: relative;
-	  bottom: 0px;
-	}
-	.main-content{
-	  flex-wrap: wrap;
-	  flex-direction: column;
-	}
-	.main-content .box{
-	  margin: 5px 0;
-	}
-  }

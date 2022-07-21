@@ -1,3 +1,51 @@
 .prodBod{
+    font-size:x-large;
     padding-bottom: 11%;
+}
+
+.prodBod input{
+    font-size: larger;
+    border-radius: 10px;
+    border-style:solid;
+
+}
+
+.prodBod .searchButton{
+    color: #FEF9F8;
+    background-color:#EF9273;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: large;
+    border-radius: 10px;
+    border-style: none;
+}
+
+.prodBod .searchButton:hover{
+    cursor: pointer;
+}
+
+.prodBod h5, h1{
+    text-align: center;
+}
+.searchBar{
+    text-align: center;
+}
+
+.actualSearchBar{
+    width: 850px;
+    padding-left: 30px;
+    margin-left: 20px;
+    box-shadow: 10px 10px #F7D0B3;
+}
+
+.products{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    padding-top: 5%;
+}
+
+.products div{
+    text-align: center;
 }

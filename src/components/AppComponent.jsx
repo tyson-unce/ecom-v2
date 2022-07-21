@@ -6,7 +6,7 @@ const AppComponent = () => {
   return (
       <>
       <div className="wrapper">
-          <div></div>
+          <div className='slogan'>smarT products</div>
     <section id="slider">
 <figure>
 <img src="./images/tysonUnce.jpeg" height="400" width="300" alt="Customer Vinyl Shopping"/>
@@ -16,7 +16,7 @@ const AppComponent = () => {
 <img src="./images/tysonUnce.jpeg" height="400" width="300" alt="Customer Vinyl Shopping"/>
 </figure>
 </section>
-<div></div>
+<div className='slogan'>dumb prices</div>
 
 
 </div>
