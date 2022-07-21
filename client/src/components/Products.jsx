@@ -2,19 +2,17 @@ import React, { useState } from 'react';
 import './compStyles/Products.css';
 import Axios from 'axios';
 
-const App = () => {
-	const [products, showProducts] = useState([]);
-};
-
-const getProducts = () => {
-	Axios.get('http://localhost:3001/getProducts').then((response) => {
-		console.log(response);
-	});
-};
-
 const Products = () => {
+	const [products, showProducts] = useState([]);
+
+	const getProducts = () => {
+		Axios.get('http://localhost:3001/getProducts').then((response) => {
+			showProducts(response.data);
+		});
+	};
+
 	return (
-		<div className='prodBod' onLoad={getProducts}>
+		<div className='prodBod'>
 			<h1>Our Products</h1>
 			<h5>(Don't want to look for it? We hear you.)</h5>
 
@@ -22,9 +20,10 @@ const Products = () => {
 				<form>
 					<input
 						className='searchButton'
-						type='Submit'
+						type='button'
 						name='search'
 						value='search'
+						onClick={getProducts}
 					/>
 
 					<input
@@ -35,23 +34,18 @@ const Products = () => {
 					/>
 				</form>
 			</div>
-
-			<div className='products'>
-				<div>
-					<img src={'./images/smarToven.png'} />
-				</div>
-				<div>d</div>
-				<div>d</div>
-				<div>d</div>
-				<div>r</div>
-				<div>z</div>
-				<div>z</div>
-				<div>z</div>
-				<div>z</div>
-				<div>z</div>
-				<div>z</div>
-				<div>z</div>
-			</div>
+			{products.map((val, key) => {
+				return (
+					<div className='productInfo'>
+						<div>
+							<h5>{val.name}</h5>
+							<img src={val.image} />
+							<p>{val.descrip}</p>
+							<p>$ {val.price}</p>
+						</div>
+					</div>
+				);
+			})}
 		</div>
 	);
 };
