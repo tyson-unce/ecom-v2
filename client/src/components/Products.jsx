@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './compStyles/Products.css';
 import Axios from 'axios';
 
 const Products = () => {
 	const [products, showProducts] = useState([]);
 
-	const getProducts = () => {
+	useEffect(() => {
 		Axios.get('http://localhost:3001/getProducts').then((response) => {
 			showProducts(response.data);
 		});
-	};
+	}, []);
 
 	return (
 		<div className='prodBod'>
@@ -23,7 +23,7 @@ const Products = () => {
 						type='button'
 						name='search'
 						value='search'
-						onClick={getProducts}
+						// onClick={getProducts}
 					/>
 
 					<input
@@ -34,18 +34,25 @@ const Products = () => {
 					/>
 				</form>
 			</div>
-			{products.map((val, key) => {
-				return (
-					<div className='productInfo'>
+			<div className='productInfo'>
+				{products.map((val) => {
+					return (
 						<div>
+							{/* <h5>{val.name}</h5> */}
+							<button>Add to cart</button>
+							<br />
+							<br />
+							<img src={val.image} alt='product' />
+							<br />
 							<h5>{val.name}</h5>
-							<img src={val.image} />
+							{/* <p className='price'>${val.price}</p> */}
+							{/* <button>Add to cart</button> */}
 							<p>{val.descrip}</p>
-							<p>$ {val.price}</p>
+							<p className='price'>${val.price}</p>
 						</div>
-					</div>
-				);
-			})}
+					);
+				})}
+			</div>
 		</div>
 	);
 };
