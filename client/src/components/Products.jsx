@@ -11,6 +11,18 @@ const Products = () => {
 		});
 	}, []);
 
+	const getLowProd = () => {
+		Axios.get('http://localhost:3001/getProductsPriceLow').then((response) => {
+			showProducts(response.data);
+		});
+	};
+
+	const getHighProd = () => {
+		Axios.get('http://localhost:3001/getProductsPriceHigh').then((response) => {
+			showProducts(response.data);
+		});
+	};
+
 	return (
 		<div className='prodBod'>
 			<h1>Our Products</h1>
@@ -22,15 +34,16 @@ const Products = () => {
 						className='searchButton'
 						type='button'
 						name='search'
-						value='search'
-						// onClick={getProducts}
+						value='sort by $ high'
+						onClick={getHighProd}
 					/>
 
 					<input
-						className='actualSearchBar'
-						type='text'
-						name='comments'
-						placeholder='ex. Smart TV'
+						className='searchButton'
+						type='button'
+						name='search'
+						value='sort by $ low'
+						onClick={getLowProd}
 					/>
 				</form>
 			</div>

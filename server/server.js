@@ -30,6 +30,32 @@ app.get('/getProducts', (req, res) => {
 	});
 });
 
+app.get('/getProductsPriceLow', (req, res) => {
+	connection.query(
+		'SELECT * FROM products ORDER BY price ASC',
+		(err, result) => {
+			if (err) {
+				console.log(err);
+			} else {
+				res.send(result);
+			}
+		}
+	);
+});
+
+app.get('/getProductsPriceHigh', (req, res) => {
+	connection.query(
+		'SELECT * FROM products ORDER BY price DESC',
+		(err, result) => {
+			if (err) {
+				console.log(err);
+			} else {
+				res.send(result);
+			}
+		}
+	);
+});
+
 // SPECIFYING IF CONNECTION TO OUR DATABASE IS SUCCESSFUL OR UNSUCCESSFUL
 connection.connect((err) => {
 	if (err) {
