@@ -46,7 +46,7 @@ const Contact = () => {
 		<div className='contactForm'>
 			<h1 id='conH1'>Enjoyed the smarT&#8482; experience? Let us know here.</h1>
 			<section className='conFormPro'>
-				<div></div>
+				<div className='padding'></div>
 				<form className='conForm' onSubmit={handleSubmit}>
 					<section class='form1'>
 						<label>Preffered Name:</label>
@@ -91,9 +91,9 @@ const Contact = () => {
 					</section>
 					<br />
 					<section className='buttonSub'>
-						<div></div>
+						<div className='padding'></div>
 						<input type='submit' name='submit' value='Submit' />
-						<div></div>
+						<div className='padding'></div>
 					</section>
 					{Object.keys(formErrors).length === 0 && isSubmit ? (
 						<div className='uiMessage'>Thank you for your feedback!</div>
@@ -101,7 +101,7 @@ const Contact = () => {
 						''
 					)}
 				</form>
-				<div></div>
+				<div className='padding'></div>
 			</section>
 		</div>
 	);

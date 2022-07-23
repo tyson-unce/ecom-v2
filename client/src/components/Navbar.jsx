@@ -3,38 +3,34 @@ import { NavLink } from 'react-router-dom';
 import './compStyles/Navbar.css';
 
 const Navbar = () => {
-  return (
-    <header className='nav'>
-    <nav className='navHome'>
-        <ul>
-            <li>
-                <NavLink to="/">Home</NavLink>
-            </li>
-        </ul>
-    </nav>
-    <nav className='navLogo'>
-        <ul>
-            <li id='logo'>
-            <NavLink to="/"><img id='logo' src={'./images/smarT.png'} alt='Tyson Unce'></img></NavLink>
-            </li>
-        </ul>
-    </nav>
-    <nav className='navProducts'>
-        <ul>
-            <li>
-                <NavLink to="/products">Products</NavLink>
-            </li>
-        </ul>
-    </nav>
-    <nav className='navContact'>
-        <ul>
-            <li>
-                <NavLink to="/contact">Contact</NavLink>
-            </li>
-        </ul>
-    </nav>
-</header>
-  )
-}
+	return (
+		<header className='nav'>
+			<nav>
+				<ul className='navHome'>
+					<li>
+						<NavLink to='/'>Home</NavLink>
+					</li>
 
-export default Navbar
+					<li id='logo'>
+						<NavLink to='/'>
+							<img id='logo' src={'./images/smarT.png'} alt='Tyson Unce'></img>
+						</NavLink>
+					</li>
+
+					<li>
+						<NavLink to='/products'>Products</NavLink>
+					</li>
+
+					<li>
+						<NavLink to='/contact'>Contact</NavLink>
+					</li>
+				</ul>
+				<NavLink to='/'>
+					<img id='logo2' src={'./images/smarT.png'} alt='Tyson Unce'></img>
+				</NavLink>
+			</nav>
+		</header>
+	);
+};
+
+export default Navbar;

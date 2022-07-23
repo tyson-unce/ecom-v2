@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './compStyles/Products.css';
 import Axios from 'axios';
-import Select from 'react-select';
 
 const Products = () => {
 	const [products, showProducts] = useState([]);
@@ -63,7 +62,7 @@ const Products = () => {
 
 			<div className='searchBar'>
 				<form>
-					<div></div>
+					<div className='padding'></div>
 					<div>
 						<input
 							className='searchButton'
@@ -71,7 +70,12 @@ const Products = () => {
 							name='search'
 							value='search'
 						/>
-						<input type='search' name='search bar' placeholder='ex. smarT TV' />
+						<input
+							className='actualSearchBar'
+							type='search'
+							name='search bar'
+							placeholder='ex. smarT TV'
+						/>
 					</div>
 					<div id='dropDown'>
 						<label for='cars'>Sort By: </label>

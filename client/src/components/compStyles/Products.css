@@ -29,15 +29,14 @@
 .prodBod h5,
 h1 {
 	text-align: center;
+	padding-right: 3%;
 }
 .searchBar {
 	text-align: center;
 }
 
 .actualSearchBar {
-	width: 850px;
-	padding-left: 30px;
-	margin-left: 20px;
+	width: 305px;
 	box-shadow: 10px 10px #f7d0b3;
 }
 
@@ -69,7 +68,7 @@ h1 {
 	/* background-color: #f8bca8; */
 }
 
-.productInfo P {
+.productInfo p {
 	text-align: left;
 	font-size: medium;
 }
@@ -106,10 +105,52 @@ h1 {
 
 .searchBar form {
 	display: grid;
-	grid-template-columns: 32% 35% 33%;
+	grid-template-columns: 30% 37% 33%;
 }
 select {
 	text-align: center;
 	width: 150px;
 	font-size: large;
+}
+
+@media screen and (max-width: 480px) {
+	.prodBod {
+		font-size: large;
+		padding-bottom: 0;
+	}
+	.searchBar form {
+		display: grid;
+		grid-template-columns: 100%;
+	}
+	.actualSearchBar {
+		width: 175px;
+	}
+	.productInfo {
+		padding-left: 1%;
+		padding-top: 12%;
+		display: grid;
+		grid-template-columns: 100%;
+		grid-row-gap: 3em;
+		grid-column-gap: 3%;
+	}
+}
+
+@media screen and (max-width: 821px) and (min-width: 481px) {
+	.prodBod {
+		font-size: large;
+		padding-bottom: 0;
+	}
+	.searchBar form {
+		grid-template-columns: 0% 65% 30%;
+	}
+	.actualSearchBar {
+		width: 300px;
+	}
+	.productInfo {
+		padding-left: 1%;
+		padding-top: 12%;
+		display: grid;
+		grid-template-columns: 48% 48%;
+		grid-row-gap: 3em;
+	}
 }
