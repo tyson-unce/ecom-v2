@@ -15,10 +15,11 @@
 	padding-left: 30px;
 	padding-right: 30px;
 	padding-top: 12px;
-	padding-bottom: 12px;
+	padding-bottom: 8px;
 	font-size: large;
 	border-radius: 10px;
 	border-style: none;
+	margin-right: 10px;
 }
 
 .prodBod .searchButton:hover {
@@ -93,4 +94,22 @@ h1 {
 .productInfo .price {
 	font-size: 1em;
 	/* text-align: center; */
+}
+
+.orderButton {
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	font-size: smaller;
+}
+
+.searchBar form {
+	display: grid;
+	grid-template-columns: 32% 35% 33%;
+}
+select {
+	text-align: center;
+	width: 150px;
+	font-size: large;
 }

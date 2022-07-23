@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './compStyles/Products.css';
 import Axios from 'axios';
+import Select from 'react-select';
 
 const Products = () => {
 	const [products, showProducts] = useState([]);
@@ -23,6 +24,38 @@ const Products = () => {
 		});
 	};
 
+	const getCategory = () => {
+		Axios.get('http://localhost:3001/getProducts').then((response) => {
+			showProducts(response.data);
+		});
+	};
+
+	const options = [
+		{
+			label: 'High',
+		},
+		{
+			label: 'Low',
+		},
+	];
+
+	const onChange = (e) => {
+		if (e.target.value === 'High') {
+			{
+				getHighProd();
+			}
+		}
+		if (e.target.value === 'Low') {
+			{
+				getLowProd();
+			}
+		}
+		if (e.target.value === 'Category') {
+			{
+				getCategory();
+			}
+		}
+	};
 	return (
 		<div className='prodBod'>
 			<h1>Our Products</h1>
@@ -30,23 +63,29 @@ const Products = () => {
 
 			<div className='searchBar'>
 				<form>
-					<input
-						className='searchButton'
-						type='button'
-						name='search'
-						value='sort by $ high'
-						onClick={getHighProd}
-					/>
+					<div></div>
+					<div>
+						<input
+							className='searchButton'
+							type='button'
+							name='search'
+							value='search'
+						/>
+						<input type='search' name='search bar' placeholder='ex. smarT TV' />
+					</div>
+					<div id='dropDown'>
+						<label for='cars'>Sort By: </label>
 
-					<input
-						className='searchButton'
-						type='button'
-						name='search'
-						value='sort by $ low'
-						onClick={getLowProd}
-					/>
+						<select name='cars' onChange={onChange}>
+							<option value='null'>Select</option>
+							<option value='High'>Price: High to Low</option>
+							<option value='Low'>Price: Low to High</option>
+							<option value='Category'>Category</option>
+						</select>
+					</div>
 				</form>
 			</div>
+
 			<div className='productInfo'>
 				{products.map((val) => {
 					return (
