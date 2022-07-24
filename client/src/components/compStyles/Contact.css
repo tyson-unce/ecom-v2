@@ -108,7 +108,7 @@ section label {
 	}
 }
 
-@media screen and (max-width: 775px) and (min-width: 481px) {
+@media screen and (max-width: 821px) and (min-width: 481px) {
 	.form1 input {
 		width: 650px;
 	}

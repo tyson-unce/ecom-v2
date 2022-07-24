@@ -140,7 +140,7 @@ aside h2 {
 	}
 }
 
-@media screen and (max-width: 775px) and (min-width: 481px) {
+@media screen and (max-width: 821px) and (min-width: 481px) {
 	.homeCards {
 		grid-template-columns: 8% 48% 25% 10%;
 	}

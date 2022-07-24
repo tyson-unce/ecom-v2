@@ -29,15 +29,6 @@ const Products = () => {
 		});
 	};
 
-	const options = [
-		{
-			label: 'High',
-		},
-		{
-			label: 'Low',
-		},
-	];
-
 	const onChange = (e) => {
 		if (e.target.value === 'High') {
 			{
@@ -80,7 +71,7 @@ const Products = () => {
 					<div id='dropDown'>
 						<label for='cars'>Sort By: </label>
 
-						<select name='cars' onChange={onChange}>
+						<select name='filters' onChange={onChange}>
 							<option value='null'>Select</option>
 							<option value='High'>Price: High to Low</option>
 							<option value='Low'>Price: Low to High</option>

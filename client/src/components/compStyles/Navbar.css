@@ -63,7 +63,7 @@ a {
 	}
 }
 
-@media screen and (max-width: 775px) and (min-width: 481px) {
+@media screen and (max-width: 821px) and (min-width: 481px) {
 	.navHome {
 		display: grid;
 		grid-template-columns: 38% 25% 18% 5%;
