@@ -13,11 +13,11 @@ app.listen(process.env.PORT || 8080, () => {
 });
 
 const connection = mysql.createConnection({
-	host: process.env.HOST,
-	user: process.env.USERNAME,
-	password: process.env.PASSWORD,
-	database: process.env.DATABASE,
-	port: process.env.DB_PORT,
+	host: 'ecomv2db.cn4rq0zlq00y.us-east-1.rds.amazonaws.com',
+	user: 'tysonunce',
+	password: 'Thebeastmode7!',
+	database: 'ecomv2',
+	port: 3306,
 });
 
 app.get('/', (req, res) => {
