@@ -20,7 +20,7 @@ const connection = mysql.createConnection({
 	port: process.env.DB_PORT,
 });
 
-app.get('/getProducts', (req, res) => {
+app.get('/', (req, res) => {
 	connection.query('SELECT * FROM products', (err, result) => {
 		if (err) {
 			console.log(err);
